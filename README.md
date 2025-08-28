@@ -243,7 +243,7 @@
                             src="223344.jpg" 
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
                             class="w-full h-full object-cover"
-                            onerror="this.src='https://placehold.co/400x400/B22234/FFFFFF?text=Daffa+Arridho'"
+                            onerror="223344.jpg"
                         >
                     </div>
                     
