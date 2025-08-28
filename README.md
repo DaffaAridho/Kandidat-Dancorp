@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -23,8 +23,7 @@
             background: linear-gradient(135deg, var(--marching-navy) 0%, #000080 50%, var(--marching-black) 100%);
             background-image: 
                 url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40,40 C60,20 140,20 160,40 C180,60 180,140 160,160 C140,180 60,180 40,160 C20,140 20,60 40,40 Z' stroke='rgba(178,34,52,0.15)' stroke-width='2' fill='none'/%3E%3Cpath d='M80,80 C90,70 110,70 120,80 C130,90 130,110 120,120 C110,130 90,130 80,120 C70,110 70,90 80,80 Z' stroke='rgba(255,215,0,0.15)' stroke-width='1' fill='none'/%3E%3C/svg%3E"),
-                radial-gradient(circle at 20% 30%, rgba(178, 34, 52, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+
             min-height: 100vh;
             margin: 0;
             padding: 20px;
