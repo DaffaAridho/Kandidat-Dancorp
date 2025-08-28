@@ -445,7 +445,7 @@
                     <!-- Foto dipindahkan ke atas nama -->
                     <div class="profile-image mx-auto mb-8 overflow-hidden image-loading" style="width: 350px; height: 350px;">
                         <img
-                            src="223344.jpg"
+                            src="Tambahkan judul.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
                             class="w-full h-full object-contain"
                             loading="lazy"
