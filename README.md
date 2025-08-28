@@ -500,27 +500,40 @@
         </div>
     </div>
 
-    <!-- Background Music with Auto Play -->
-    <audio id="bgMusic" autoplay loop preload="auto" style="display: none;">
-        <source src="Hujan Gerimis.mp3" type="audio/mpeg">
+    <!-- Background Music - Plays on User Interaction -->
+    <audio id="bgMusic" loop preload="auto" style="display: none;">
+        <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
         <source src="background-music.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        // Background Music Auto Play
+        // Background Music - Plays on User Interaction
         document.addEventListener('DOMContentLoaded', function() {
             const bgMusic = document.getElementById('bgMusic');
+            let musicStarted = false;
 
-            // Set volume and try to play
+            // Set volume
             if (bgMusic) {
                 bgMusic.volume = 0.6; // 60% volume
-
-                // Auto play music
-                bgMusic.play().catch(function(error) {
-                    console.log('Auto-play prevented:', error);
-                });
             }
+
+            // Function to start music
+            function startMusic() {
+                if (bgMusic && !musicStarted) {
+                    musicStarted = true;
+                    bgMusic.play().catch(function(error) {
+                        console.log('Music play failed:', error);
+                    });
+                    // Remove listeners after first interaction
+                    document.removeEventListener('click', startMusic);
+                    document.removeEventListener('touchstart', startMusic);
+                }
+            }
+
+            // Add event listeners for user interaction
+            document.addEventListener('click', startMusic);
+            document.addEventListener('touchstart', startMusic);
 
             // Add simple music control button
             const musicBtn = document.createElement('button');
