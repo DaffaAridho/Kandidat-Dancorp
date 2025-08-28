@@ -500,9 +500,46 @@
         </div>
     </div>
 
+    <!-- Background Music with Auto Play -->
+    <audio id="bgMusic" autoplay loop preload="auto" style="display: none;">
+        <source src="Hujan Gerimis.mp3" type="audio/mpeg">
+        <source src="background-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
-        // Animasi scroll dengan Intersection Observer
+        // Background Music Auto Play
         document.addEventListener('DOMContentLoaded', function() {
+            const bgMusic = document.getElementById('bgMusic');
+
+            // Set volume and try to play
+            if (bgMusic) {
+                bgMusic.volume = 0.2; // 20% volume
+
+                // Auto play music
+                bgMusic.play().catch(function(error) {
+                    console.log('Auto-play prevented:', error);
+                });
+            }
+
+            // Add simple music control button
+            const musicBtn = document.createElement('button');
+            musicBtn.innerHTML = '🔊 Music';
+            musicBtn.className = 'fixed bottom-4 left-4 bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-2 rounded-full shadow-lg z-50 text-sm';
+            musicBtn.onclick = function() {
+                if (bgMusic.paused) {
+                    bgMusic.play();
+                    musicBtn.innerHTML = '🔊 Music';
+                    musicBtn.className = musicBtn.className.replace('bg-red-500', 'bg-yellow-500');
+                } else {
+                    bgMusic.pause();
+                    musicBtn.innerHTML = '🔇 Muted';
+                    musicBtn.className = musicBtn.className.replace('bg-yellow-500', 'bg-red-500');
+                }
+            };
+            document.body.appendChild(musicBtn);
+
+            // Animasi scroll dengan Intersection Observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -512,7 +549,6 @@
                 });
             }, {
                 threshold: 0.1,
-                
             });
         });
     </script>
