@@ -52,15 +52,12 @@
             border: 3px solid var(--marching-gold);
             border-radius: 20px;
             box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 40px rgba(255, 215, 0, 0.3),
+                0 20px 50px rgba(0, 0, 0, 0.4),
+                0 0 35x rgba(255, 215, 0, 0.3),
                 inset 0 2px 0 rgba(255, 255, 255, 0.15);
         }
         
-        .profile-section {
-            border-right: 2px solid var(--marching-gold);
-            border-right-style: dotted;
-        }
+       
         
         .profile-image {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
