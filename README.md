@@ -1,8 +1,8 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daffa Arridho - Marching Band Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,13 +18,16 @@
             --marching-silver: #C0C0C0;
         }
         
-         body {
+        body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--marching-navy) 0%, #000080 50%, var(--marching-black) 100%);
             background-image: 
+                url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40,40 C60,20 140,20 160,40 C180,60 180,140 160,160 C140,180 60,180 40,160 C20,140 20,60 40,40 Z' stroke='rgba(178,34,52,0.15)' stroke-width='2' fill='none'/%3E%3Cpath d='M80,80 C90,70 110,70 120,80 C130,90 130,110 120,120 C110,130 90,130 80,120 C70,110 70,90 80,80 Z' stroke='rgba(255,215,0,0.15)' stroke-width='1' fill='none'/%3E%3C/svg%3E"),
+                radial-gradient(circle at 20% 30%, rgba(178, 34, 52, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
             min-height: 100vh;
             margin: 0;
-            padding: 8px;
+            padding: 20px;
             color: var(--marching-white);
             position: relative;
             overflow-x: hidden;
@@ -49,20 +52,23 @@
             border: 3px solid var(--marching-gold);
             border-radius: 20px;
             box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.4),
-                0 0 35x rgba(255, 215, 0, 0.3),
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(255, 215, 0, 0.3),
                 inset 0 2px 0 rgba(255, 255, 255, 0.15);
         }
         
-       
+        .profile-section {
+            border-right: 2px solid var(--marching-gold);
+            border-right-style: dotted;
+        }
         
         .profile-image {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid var(--marching-gold);
-            border-radius: 10px;
-            box-shadow:
-                0 15px 30px rgba(0, 0, 0, 0.3),
-                0 0 20px rgba(255, 215, 0, 0.4);
+            border: 4px solid var(--marching-gold);
+            border-radius: 15px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(255, 215, 0, 0.4);
         }
         
         .profile-image:hover {
@@ -172,8 +178,7 @@
             letter-spacing: 1px;
         }
         
-        /* Removed decorative line below marching title */
-        /* .marching-title::after {
+        .marching-title::after {
             content: '';
             position: absolute;
             bottom: -12px;
@@ -182,317 +187,114 @@
             width: 100px;
             height: 3px;
             background: linear-gradient(90deg, transparent, var(--marching-gold), transparent);
-        } */
+        }
         
         .instrument-float {
             animation: instrumentFloat 6s ease-in-out infinite;
         }
-
-        /* Image loading states */
-        .image-loading {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-        }
-
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .profile-image img {
-            transition: opacity 0.3s ease;
-        }
-
-        .profile-image img[loading] {
-            opacity: 0;
-        }
-
-        .profile-image img[loaded] {
-            opacity: 1;
-        }
-
-        .vision-content {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
+        
         @keyframes instrumentFloat {
-            0%, 100% {
+            0%, 100% { 
                 transform: translateY(0px) rotate(0deg) scale(1);
                 filter: drop-shadow(0 5px 15px rgba(255, 215, 0, 0.4));
             }
-            33% {
+            33% { 
                 transform: translateY(-20px) rotate(-10deg) scale(1.1);
                 filter: drop-shadow(0 10px 20px rgba(255, 215, 0, 0.6));
             }
-            66% {
+            66% { 
                 transform: translateY(-10px) rotate(10deg) scale(1.05);
                 filter: drop-shadow(0 8px 18px rgba(255, 215, 0, 0.5));
             }
         }
-
-        /* Mobile responsive styles for full display */
-        @media (max-width: 640px) {
-            body {
-                padding: 4px;
-                font-size: 14px;
-            }
-
-            .marching-container {
-                border-radius: 12px;
-                margin: 2px;
-                padding: 0.75rem;
-                border-width: 2px;
-            }
-
-            /* Full width profile image on mobile */
-            .profile-image {
-                width: 100% !important;
-                height: auto !important;
-                max-width: 280px;
-                margin: 0 auto 1rem !important;
-            }
-
-            .vision-card {
-                margin-bottom: 1rem;
-                padding: 0.75rem;
-                border-left-width: 3px;
-            }
-
-            .name-plate {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-                width: 100%;
-                display: block;
-                text-align: center;
-            }
-
-            .marching-title {
-                font-size: 1.5rem;
-                line-height: 1.2;
-                letter-spacing: 0.5px;
-            }
-
-            /* Main title smaller on mobile */
-            .marching-container h1.marching-title {
-                font-size: 1.75rem;
-                margin-bottom: 0.5rem;
-            }
-
-            /* Subtitle smaller */
-            .marching-container p.text-gray-200 {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
-
-            /* Improve readability on mobile */
-            .vision-content {
-                word-wrap: break-word;
-                hyphens: auto;
-                font-size: 1rem;
-                line-height: 1.6;
-                font-weight: 500;
-            }
-
-            /* Mission list better spacing */
-            .vision-card ul li {
-                margin-bottom: 0.75rem;
-            }
-
-            .vision-card ul li span:first-child {
-                margin-top: 0.25rem;
-            }
-
-            /* Better contrast for mobile */
-            .text-gray-200 {
-                color: #e5e7eb !important;
-            }
-
-            .text-gray-300 {
-                color: #d1d5db !important;
-            }
-
-            /* Larger touch targets */
-            .instagram-link {
-                min-width: 60px;
-                min-height: 60px;
-                width: 60px;
-                height: 60px;
-            }
-
-            /* Logo smaller on mobile */
-            .marching-logo {
-                width: 60px !important;
-                height: 60px !important;
-            }
-
-            .marching-logo img {
-                width: 48px !important;
-                height: 48px !important;
-            }
-
-            /* Social media section */
-            .instagram-link {
-                width: 60px !important;
-                height: 60px !important;
-            }
-
-            /* Footer adjustments */
-            .text-center span {
-                font-size: 1.5rem;
-            }
-
-            /* Music button position */
-            .fixed.bottom-4.left-4 {
-                bottom: 1rem;
-                left: 1rem;
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-            }
-
-            /* Improve spacing */
-            .space-y-6 > * + * {
-                margin-top: 1rem;
-            }
-
-            .space-y-8 > * + * {
-                margin-top: 1.5rem;
-            }
-
-            /* Grid adjustments for mobile */
-            .grid.grid-cols-1.lg\\:grid-cols-2 {
-                gap: 1.5rem;
-            }
-
-            /* Card titles smaller */
-            .vision-card h3 {
-                font-size: 1.25rem;
-                margin-bottom: 0.75rem;
-            }
-
-            /* Icon sizes */
-            .vision-card .w-12.h-12 {
-                width: 40px !important;
-                height: 40px !important;
-            }
-
-            .vision-card i {
-                font-size: 1.25rem !important;
-            }
-
-            /* Full width cards on mobile */
-            .vision-card {
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            /* Better text alignment */
-            .text-center {
-                text-align: center;
-            }
-
-            /* Ensure images are responsive */
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
-    <div class="marching-container w-full max-w-6xl mx-auto p-12 relative overflow-hidden" style="width: 1200px; margin: 0 auto;">
-        <!-- Floating Music Instruments Background - Hidden on mobile for cleaner look -->
-        <div class="hidden sm:block absolute top-8 left-8 text-4xl md:text-5xl instrument-float" style="animation-delay: 0s; color: #FF6B6B;">🎷</div>
-        <div class="hidden sm:block absolute top-20 right-12 text-3xl md:text-4xl instrument-float" style="animation-delay: 2s; color: #FFD700;">🥁</div>
-        <div class="hidden sm:block absolute bottom-16 left-16 text-4xl md:text-5xl instrument-float" style="animation-delay: 4s; color: #4ECDC4;">🎺</div>
-        <div class="hidden sm:block absolute bottom-8 right-8 text-3xl md:text-4xl instrument-float" style="animation-delay: 1s; color: #FFE66D;">🎻</div>
-
-        <!-- Floating Music Notes - Hidden on mobile for cleaner look -->
-        <div class="hidden sm:block absolute top-1/4 left-1/4 text-3xl music-note" style="animation-delay: 0.5s;">♪</div>
-        <div class="hidden sm:block absolute top-1/3 right-1/3 text-2xl music-note" style="animation-delay: 1.5s;">♫</div>
-        <div class="hidden sm:block absolute bottom-1/4 left-1/3 text-3xl music-note" style="animation-delay: 2.5s;">🎵</div>
-        <div class="hidden sm:block absolute bottom-1/3 right-1/4 text-2xl music-note" style="animation-delay: 3.5s;">♩</div>
+    <div class="marching-container w-full max-w-6xl mx-auto p-8 md:p-12 relative overflow-hidden">
 
         <!-- Header -->
-        <div class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h1 class="marching-title font-bold mb-6" style="font-size: 48px;">
+        <div class="text-center mb-16">
+            <h1 class="marching-title text-5xl md:text-6xl font-bold mb-6">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-200 font-light italic mb-6" style="font-size: 18px;">
-               • KWARDA KEPULAUAN RIAU •
+            <p class="text-gray-300 text-xl font-light italic">
+                KWARDA KEPULAUAN RIAU
             </p>
         </div>
 
 
 
         <!-- Main Content -->
-        <div class="flex gap-20 items-start mb-18" style="display: flex; gap: 80px;">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
             <!-- Profile Section - Foto dan Nama -->
-            <div class="profile-section" style="width: 400px; flex-shrink: 0;">
+            <div class="profile-section pr-0 lg:pr-12">
                 <div class="text-center">
-                    <!-- Teks di atas -->
-                    <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
-                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 24px;">KANDIDAT DANCROPS NO 1</h2>
-                </div>
-
-                    <!-- Foto dipindahkan ke atas nama -->
-                    <div class="profile-image mx-auto mb-8 overflow-hidden image-loading" style="width: 350px; height: 350px;">
-                        <img
-                            src="223344.jpg"
+                    <!-- Foto -->
+                    <div class="profile-image mx-auto mb-8 w-64 h-64 overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fad69db3-40c8-47e5-9ef6-0b814cb6f597.png" 
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
-                            class="w-full h-full object-contain"
-                            loading="lazy"
-                            onload="this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
-                            onerror="this.src='223344.jpg'; this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://placehold.co/400x400/B22234/FFFFFF?text=Daffa+Arridho'"
                         >
                     </div>
+                    
+                    <!-- Nama Daffa Arridho -->
+                    <div class="name-plate px-8 py-4 rounded-lg inline-block">
+                        <h2 class="text-3xl font-bold text-yellow-400 mb-1">Daffa Arridho</h2>
+                        <h2 class="text-3xl font-bold text-yellow-400 mb-1">KANDIDAT NO 01</h2>
+                        <p class="text-gray-200 text-sm">Tuba player • MB.Tunas Gurindam Corps </p>
+                    </div>
 
-                    <!-- Nama Daffa Arridho dipindahkan ke bawah foto -->
-                    <div class="name-plate px-4 py-2 rounded-lg inline-block">
-                        <h1 class="marching-title font-bold mb-2" style="font-size: 32px;">
-                Daffa Arridho
-            </h1>
+                    <!-- Background Music Elements Below Name -->
+                    <div class="relative mt-8 mb-4">
+                        <!-- Floating Music Instruments -->
+                        <div class="absolute -top-4 -left-8 text-6xl instrument-float" style="animation-delay: 0s; color: #FF6B6B;">🎷</div>
+                        <div class="absolute -top-2 right-8 text-5xl instrument-float" style="animation-delay: 2s; color: #FFD700;">🥁</div>
+                        <div class="absolute top-8 -left-4 text-6xl instrument-float" style="animation-delay: 4s; color: #4ECDC4;">🎺</div>
+                        <div class="absolute top-6 right-4 text-5xl instrument-float" style="animation-delay: 1s; color: #FFE66D;">🎻</div>
 
-                        <p class="text-gray-200" style="font-size: 14px;">Tuba player • MB.Tunas Gurindam Corps </p>
+                        <!-- Floating Music Notes -->
+                        <div class="absolute top-2 left-12 text-4xl music-note" style="animation-delay: 0.5s;">♪</div>
+                        <div class="absolute top-4 right-16 text-3xl music-note" style="animation-delay: 1.5s;">♫</div>
+                        <div class="absolute top-12 left-8 text-4xl music-note" style="animation-delay: 2.5s;">🎵</div>
+                        <div class="absolute top-10 right-12 text-3xl music-note" style="animation-delay: 3.5s;">♩</div>
                     </div>
                 </div>
             </div>
 
 
+            
 
             <!-- Visi Misi Section -->
-           <div class="space-y-12" style="width: 600px; flex-shrink: 0;">
+            <div class="space-y-10">
                 <!-- Visi -->
-                <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
+                <div class="vision-card p-8 rounded-xl">
                     <div class="flex items-start mb-5">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
-                            <i class="fas fa-eye text-white text-2xl md:text-3xl"></i>
+                        <div class="w-14 h-14 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-5 shadow-xl">
+                            <i class="fas fa-eye text-white text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">VISI</h3>
-                            <p class="vision-content text-gray-200" style="font-size: 20px;">
-                                Menjadikan Marching Band Tunas Guridam Corps yang berprestasi, disiplin, kreatif dan mampu mengharumkan nama marching band tunas gurindam melalui Penampilan dan kejuaran di tingkat Kota, Provinsi, bahkan Nasional.
+                            <h3 class="text-2xl font-bold text-yellow-400 mb-4">VISI</h3>
+                            <p class="text-gray-200 leading-relaxed text-lg">
+                                Menjadikan Marching Band Tunas Gurindam Corps yang berprestasi, disiplin, kreatif dan mampu mengharumkan nama marching band tunas gurindam melalui Penampilan dan kejuaran di tingkat Kota, Provinsi, bahkan Nasional.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Misi -->
-                <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
+                <div class="vision-card p-8 rounded-xl">
                     <div class="flex items-start mb-5">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-800 to-red-600 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
-                            <i class="fas fa-music text-white text-2xl md:text-3xl"></i>
+                        <div class="w-14 h-14 bg-gradient-to-r from-blue-800 to-red-600 rounded-full flex items-center justify-center mr-5 shadow-xl">
+                            <i class="fas fa-music text-white text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">MISI</h3>
-                            <ul class="text-gray-200 space-y-4" style="font-size: 18px;">
+                            <h3 class="text-2xl font-bold text-yellow-400 mb-4">MISI</h3>
+                            <ul class="text-gray-200 space-y-3 text-lg">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span> Meningkatkan kedisplinan,  kekompakan dan tanggung jawab sesama anggota</span>
+                                    <span>Meningkatkan kedisplinan, kekompakan dan tanggung jawab sesama anggota</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
@@ -500,37 +302,11 @@
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span> Menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba</span>
+                                    <span>Menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>  Membentuk karakter anggota sebagai sosok BRAVARA Sejati</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Program -->
-                <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
-                    <div class="flex items-start mb-5">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-600 to-yellow-500 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
-                            <i class="fas fa-clipboard-list text-white text-2xl md:text-3xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">PROGRAM</h3>
-                            <ul class="text-gray-200 space-y-4" style="font-size: 18px;">
-                                <li class="flex items-start">
-                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>Program senam pagi bersama setiap 1 bulan sekali</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>Rapat bulanan tim inti</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>Outbound setiap 6 bulan sekali di setiap liburan semester</span>
+                                    <span>Membentuk karakter anggota sebagai sosok BRAVARA Sejati</span>
                                 </li>
                             </ul>
                         </div>
@@ -540,65 +316,49 @@
         </div>
 
         <!-- Logo Bulat -->
-        <div class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8 mb-8 sm:mb-12 md:mb-16">
-            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center image-loading">
-                <img
-                    src="kwarda.jpg"
+        <div class="flex justify-center mb-16">
+            <div class="marching-logo w-40 h-40 rounded-full flex items-center justify-center mx-auto">
+                <img 
+                    src="242104513_266398215333645_4612524844173446882_n.jpg" 
                     alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
-                    class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full"
-                    loading="lazy"
-                    onload="this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
-                    onerror="this.style.display='none'"
-                >
-            </div>
-            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center image-loading">
-                <img
-                    src="242104513_266398215333645_4612524844173446882_n.jpg"
-                    alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
-                    class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full"
-                    loading="lazy"
-                    onload="this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
-                    onerror="this.style.display='none'"
+                    class="w-28 h-28 rounded-full"
                 >
             </div>
         </div>
 
         <!-- Media Sosial Instagram -->
         <div class="text-center">
-            <h3 class="text-xl sm:text-2xl font-bold text-yellow-400 mb-6 sm:mb-8 md:mb-10">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-10">
                 MEDIA SOSIAL
             </h3>
             
-            <div class="flex justify-center space-x-6 sm:space-x-8 md:space-x-10 mb-6 sm:mb-8">
+            <div class="flex justify-center space-x-10 mb-8">
                 <!-- Instagram Link 1 -->
-                <a href="https://www.instagram.com/daffaridhooo_/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
-                    <i class="fab fa-instagram text-white text-2xl sm:text-3xl"></i>
+                <a href="https://www.instagram.com/daffaridhooo_/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagram-link w-28 h-28 rounded-full flex items-center justify-center transform transition-all duration-300">
+                    <i class="fab fa-instagram text-white text-4xl"></i>
                 </a>
 
                 <!-- Instagram Link 2 -->
-                <a href="https://www.instagram.com/tunasgurindam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
-                    <i class="fab fa-instagram text-white text-2xl sm:text-3xl"></i>
+                <a href="https://www.instagram.com/tunasgurindam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link w-28 h-28 rounded-full flex items-center justify-center transform transition-all duration-300">
+                    <i class="fab fa-instagram text-white text-4xl"></i>
                 </a>
             </div>
 
             <!-- Nama Akun Instagram -->
             <div class="text-center">
                 <p class="text-gray-300 text-lg mb-4">Follow akun Instagram:</p>
-                <div class="flex justify-center space-x-4 sm:space-x-6 md:space-x-8 flex-wrap gap-3 sm:gap-4">
-                    <span class="text-white font-bold bg-red-600 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@daffaridhooo_</span>
-                    <span class="text-white font-bold bg-blue-800 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@tunasgurindam</span>
+                <div class="flex justify-center space-x-8 flex-wrap gap-4">
+                    <span class="text-white font-bold bg-red-600 px-6 py-3 rounded-full border-2 border-yellow-400 text-lg">@daffaridhooo_</span>
+                    <span class="text-white font-bold bg-blue-800 px-6 py-3 rounded-full border-2 border-yellow-400 text-lg">@tunasgurindam</span>
                 </div>
-                <p class="text-gray-200 text-sm mt-6 italic">
+                <p class="text-gray-300 text-sm mt-6 italic">
                     Saksikan momen spesial, latihan, dan pertunjukan spektakuler kami!
-                </p>
-                <p class="text-gray-200 text-sm mt-6 italic">
-                    #TunasGurindamCorps #TGC #AKT6
                 </p>
             </div>
         </div>
 
         <!-- Footer -->
-        <div class="text-center mt-12 sm:mt-16 md:mt-20 pt-6 sm:pt-8 border-t border-yellow-400 border-opacity-30">
+        <div class="text-center mt-20 pt-8 border-t border-yellow-400 border-opacity-30">
             <div class="flex justify-center space-x-6 mb-4">
                 <span class="text-3xl text-yellow-400">🎵</span>
                 <span class="text-3xl text-red-500">🎺</span>
@@ -606,76 +366,15 @@
                 <span class="text-3xl text-red-500">🎷</span>
                 <span class="text-3xl text-yellow-400">📯</span>
             </div>
-            <p class="text-gray-300 text-sm">
+            <p class="text-gray-400 text-sm">
                 © 2025 Daffa Arridho • Marching Band Tunas Gurindam Corps • Dancorp
-            </p>
-             <p class="text-gray-300 text-sm">
-                © 2025 Vareno Oka Lisandi • Web Operator
             </p>
         </div>
     </div>
 
-    <!-- Background Music - Plays on User Interaction -->
-    <audio id="bgMusic" loop preload="auto" style="display: none;">
-        <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
-        <source src="background-music.ogg" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
-
     <script>
-        // Background Music - Plays on User Interaction
+        // Animasi scroll dengan Intersection Observer
         document.addEventListener('DOMContentLoaded', function() {
-            const bgMusic = document.getElementById('bgMusic');
-            let musicStarted = false;
-
-            // Set volume
-            if (bgMusic) {
-                bgMusic.volume = 0.8; // 80% volume
-            }
-
-            // Function to start music
-            function startMusic() {
-                if (bgMusic && !musicStarted) {
-                    musicStarted = true;
-                    bgMusic.play().catch(function(error) {
-                        console.log('Music play failed:', error);
-                    });
-                    // Remove listeners after first interaction
-                    document.removeEventListener('click', startMusic);
-                    document.removeEventListener('touchstart', startMusic);
-                }
-            }
-
-            // Add event listeners for user interaction - play music on any tap/press
-            document.addEventListener('click', startMusic);
-            document.addEventListener('touchstart', startMusic);
-            document.addEventListener('touchend', startMusic);
-            document.addEventListener('pointerdown', startMusic);
-
-            // Also add to body for better mobile support
-            document.body.addEventListener('click', startMusic);
-            document.body.addEventListener('touchstart', startMusic);
-            document.body.addEventListener('touchend', startMusic);
-            document.body.addEventListener('pointerdown', startMusic);
-
-            // Add simple music control button
-            const musicBtn = document.createElement('button');
-            musicBtn.innerHTML = '🔊 Music';
-            musicBtn.className = 'fixed bottom-4 left-4 bg-yellow-500 hover:bg-yellow-600 text-black px-10 py-5 rounded-full shadow-lg z-50 text-xl';
-            musicBtn.onclick = function() {
-                if (bgMusic.paused) {
-                    bgMusic.play();
-                    musicBtn.innerHTML = '🔊 Music';
-                    musicBtn.className = musicBtn.className.replace('bg-red-500', 'bg-yellow-500');
-                } else {
-                    bgMusic.pause();
-                    musicBtn.innerHTML = '🔇 Muted';
-                    musicBtn.className = musicBtn.className.replace('bg-yellow-500', 'bg-red-500');
-                }
-            };
-            document.body.appendChild(musicBtn);
-
-            // Animasi scroll dengan Intersection Observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -685,6 +384,7 @@
                 });
             }, {
                 threshold: 0.1,
+                
             });
         });
     </script>
