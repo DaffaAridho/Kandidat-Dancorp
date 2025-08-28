@@ -514,7 +514,7 @@
 
             // Set volume and try to play
             if (bgMusic) {
-                bgMusic.volume = 0.2; // 20% volume
+                bgMusic.volume = 0.6; // 60% volume
 
                 // Auto play music
                 bgMusic.play().catch(function(error) {
@@ -525,7 +525,7 @@
             // Add simple music control button
             const musicBtn = document.createElement('button');
             musicBtn.innerHTML = '🔊 Music';
-            musicBtn.className = 'fixed bottom-4 left-4 bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-2 rounded-full shadow-lg z-50 text-sm';
+            musicBtn.className = 'fixed bottom-4 left-4 bg-yellow-500 hover:bg-yellow-600 text-black px-10 py-5 rounded-full shadow-lg z-50 text-xl';
             musicBtn.onclick = function() {
                 if (bgMusic.paused) {
                     bgMusic.play();
