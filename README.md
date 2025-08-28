@@ -21,10 +21,9 @@
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--marching-navy) 0%, #000080 50%, var(--marching-black) 100%);
-            background-image: 
+            background-image:
                 url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40,40 C60,20 140,20 160,40 C180,60 180,140 160,160 C140,180 60,180 40,160 C20,140 20,60 40,40 Z' stroke='rgba(178,34,52,0.15)' stroke-width='2' fill='none'/%3E%3Cpath d='M80,80 C90,70 110,70 120,80 C130,90 130,110 120,120 C110,130 90,130 80,120 C70,110 70,90 80,80 Z' stroke='rgba(255,215,0,0.15)' stroke-width='1' fill='none'/%3E%3C/svg%3E"),
-                radial-gradient(circle at 20% 30%, rgba(178, 34, 52, 0.1) 0%, transparent 50%),
-
+                radial-gradient(circle at 20% 30%, rgba(178, 34, 52, 0.1) 0%, transparent 50%);
             min-height: 100vh;
             margin: 0;
             padding: 20px;
@@ -462,6 +461,23 @@
 
                         <p class="text-gray-200" style="font-size: 14px;">Tuba player • MB.Tunas Gurindam Corps </p>
                     </div>
+
+                    <!-- NGL Link di bawah nama -->
+                    <div class="mt-6 text-center">
+                        <a href="https://ngl.link/daffaridhooo_2" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-full border-2 border-yellow-400 shadow-lg transform transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                            <i class="fas fa-link mr-2"></i>
+                            Kirim Pesan Anonim
+                        </a>
+                        <p class="text-gray-300 text-sm mt-3 italic">
+                            •KIRIMKAN SAYA PESAN• 
+                        </p>
+                        <p class="text-gray-300 text-sm mt-3 italic">
+                        "JIKA SAYA TERPILIH MENJADI DANCORPS , APA YANG BISA SAYA LAKUKAN UNTUK KEDEPANNYA"
+                        </p>
+                        <p class="text-gray-400 text-xs mt-1">
+                            !Pesan Anda akan tetap anonim dan aman!
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -582,14 +598,20 @@
                 <a href="https://www.instagram.com/tunasgurindam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
                     <i class="fab fa-instagram text-white text-2xl sm:text-3xl"></i>
                 </a>
+
+                <!-- NGL Link -->
+                <a href="https://ngl.link/daffaridhooo_2" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300" style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #FFE66D);">
+                    <i class="fas fa-link text-white text-2xl sm:text-3xl"></i>
+                </a>
             </div>
 
-            <!-- Nama Akun Instagram -->
+            <!-- Nama Akun Sosial Media -->
             <div class="text-center">
-                <p class="text-gray-300 text-lg mb-4">Follow akun Instagram:</p>
+                <p class="text-gray-300 text-lg mb-4">Follow akun sosial media:</p>
                 <div class="flex justify-center space-x-4 sm:space-x-6 md:space-x-8 flex-wrap gap-3 sm:gap-4">
                     <span class="text-white font-bold bg-red-600 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@daffaridhooo_</span>
                     <span class="text-white font-bold bg-blue-800 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@tunasgurindam</span>
+                    <span class="text-white font-bold bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">NGL: @DAFFARIDHOOO_2</span>
                 </div>
                 <p class="text-gray-200 text-sm mt-6 italic">
                     Saksikan momen spesial, latihan, dan pertunjukan spektakuler kami!
