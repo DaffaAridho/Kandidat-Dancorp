@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200">
     <title>Daffa Arridho - Marching Band Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -407,7 +407,7 @@
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
-    <div class="marching-container w-full max-w-6xl mx-auto p-3 sm:p-6 md:p-12 relative overflow-hidden">
+    <div class="marching-container w-full max-w-6xl mx-auto p-12 relative overflow-hidden" style="width: 1200px; margin: 0 auto;">
         <!-- Floating Music Instruments Background - Hidden on mobile for cleaner look -->
         <div class="hidden sm:block absolute top-8 left-8 text-4xl md:text-5xl instrument-float" style="animation-delay: 0s; color: #FF6B6B;">🎷</div>
         <div class="hidden sm:block absolute top-20 right-12 text-3xl md:text-4xl instrument-float" style="animation-delay: 2s; color: #FFD700;">🥁</div>
@@ -422,10 +422,10 @@
 
         <!-- Header -->
         <div class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 class="marching-title font-bold mb-6" style="font-size: 48px;">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-200 text-base sm:text-lg md:text-xl font-light italic mb-6">
+            <p class="text-gray-200 font-light italic mb-6" style="font-size: 18px;">
                • KWARDA KEPULAUAN RIAU •
             </p>
         </div>
@@ -433,17 +433,17 @@
 
 
         <!-- Main Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-14 lg:gap-20 items-start mb-10 sm:mb-14 md:mb-18">
+        <div class="flex gap-20 items-start mb-18" style="display: flex; gap: 80px;">
             <!-- Profile Section - Foto dan Nama -->
-            <div class="profile-section pr-0 lg:pr-12">
+            <div class="profile-section" style="width: 400px; flex-shrink: 0;">
                 <div class="text-center">
                     <!-- Teks di atas -->
                     <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
-                    <h2 class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
+                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 24px;">KANDIDAT DANCROPS NO 1</h2>
                 </div>
 
                     <!-- Foto dipindahkan ke atas nama -->
-                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] overflow-hidden image-loading">
+                    <div class="profile-image mx-auto mb-8 overflow-hidden image-loading" style="width: 350px; height: 350px;">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
@@ -456,11 +456,11 @@
 
                     <!-- Nama Daffa Arridho dipindahkan ke bawah foto -->
                     <div class="name-plate px-4 py-2 rounded-lg inline-block">
-                        <h1 class="marching-title text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                        <h1 class="marching-title font-bold mb-2" style="font-size: 32px;">
                 Daffa Arridho
             </h1>
 
-                        <p class="text-gray-200 text-xs">Tuba player • MB.Tunas Gurindam Corps </p>
+                        <p class="text-gray-200" style="font-size: 14px;">Tuba player • MB.Tunas Gurindam Corps </p>
                     </div>
                 </div>
             </div>
@@ -468,7 +468,7 @@
 
 
             <!-- Visi Misi Section -->
-           <div class="space-y-8 sm:space-y-10 md:space-y-12">
+           <div class="space-y-12" style="width: 600px; flex-shrink: 0;">
                 <!-- Visi -->
                 <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
@@ -476,8 +476,8 @@
                             <i class="fas fa-eye text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">VISI</h3>
-                            <p class="vision-content text-gray-200 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">VISI</h3>
+                            <p class="vision-content text-gray-200" style="font-size: 20px;">
                                 Menjadikan marching band tunas gurundam yg berprestasi disiplin creative dan mampu mengharumkan nama marching band tunas gurindam melalui seni musik dan penampilan yg berkualitas.
                             </p>
                         </div>
@@ -491,8 +491,8 @@
                             <i class="fas fa-music text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">MISI</h3>
-                            <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">MISI</h3>
+                            <ul class="text-gray-200 space-y-4" style="font-size: 18px;">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>meningkatkan kedisplinan kekompakan dan tanggung jawab sesama anggota.</span>
@@ -517,8 +517,8 @@
                             <i class="fas fa-clipboard-list text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">PROGRAM</h3>
-                            <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">PROGRAM</h3>
+                            <ul class="text-gray-200 space-y-4" style="font-size: 18px;">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>Program senam pagi bersama setiap 1 bulan sekali</span>
