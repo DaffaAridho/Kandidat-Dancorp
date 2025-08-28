@@ -643,7 +643,7 @@
     <!-- Background Music - Plays on User Interaction -->
     <audio id="bgMusic" loop preload="auto" style="display: none;">
         <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
-        <source src="background-music.ogg" type="audio/ogg">
+        <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
