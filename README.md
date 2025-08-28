@@ -222,11 +222,11 @@
 
         <!-- Header -->
         <div class="text-center mb-16">
-            <h1 class="marching-title text-5xl md:text-6xl font-bold mb-6">
+            <h1 class="marching-title text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-300 text-xl font-light italic">
-                KWARDA KEPULAUAN RIAU
+            <p class="text-gray-300 text-lg sm:text-xl font-light italic">
+               • KWARDA KEPULAUAN RIAU •
             </p>
         </div>
 
@@ -238,19 +238,24 @@
             <div class="profile-section pr-0 lg:pr-12">
                 <div class="text-center">
                     <!-- Foto -->
-                    <div class="profile-image mx-auto mb-8 w-64 h-64 overflow-hidden">
-                        <img 
-                            src="223344.jpg" 
+                    <div class="name-plate px-8 py-4 rounded-lg inline-block mb-6">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
+                    </div>
+                    <div class="profile-image mx-auto mb-8 w-64 h-64 md:w-80 md:h-80 overflow-hidden">
+                        <img
+                            src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
-                            class="w-full h-full object-cover"
-                            onerror="223344.jpg"
+                            class="w-full h-full object-contain"
+                            onerror="this.src='223344.jpg'"
                         >
                     </div>
                     
                     <!-- Nama Daffa Arridho -->
                     <div class="name-plate px-8 py-4 rounded-lg inline-block">
-                        <h2 class="text-3xl font-bold text-yellow-400 mb-1">Daffa Arridho</h2>
-                        <h2 class="text-3xl font-bold text-yellow-400 mb-1">KANDIDAT NO 01</h2>
+                        <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Daffa Arridho
+            </h1>
+                        
                         <p class="text-gray-200 text-sm">Tuba player • MB.Tunas Gurindam Corps </p>
                     </div>
                 </div>
@@ -262,29 +267,29 @@
             <!-- Visi Misi Section -->
             <div class="space-y-10">
                 <!-- Visi -->
-                <div class="vision-card p-8 rounded-xl">
+                <div class="vision-card p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
-                        <div class="w-14 h-14 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-5 shadow-xl">
-                            <i class="fas fa-eye text-white text-2xl"></i>
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
+                            <i class="fas fa-eye text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-yellow-400 mb-4">VISI</h3>
-                            <p class="text-gray-200 leading-relaxed text-lg">
-                                
+                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">VISI</h3>
+                            <p class="text-gray-200 leading-relaxed text-lg md:text-xl">
+
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Misi -->
-                <div class="vision-card p-8 rounded-xl">
+                <div class="vision-card p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
-                        <div class="w-14 h-14 bg-gradient-to-r from-blue-800 to-red-600 rounded-full flex items-center justify-center mr-5 shadow-xl">
-                            <i class="fas fa-music text-white text-2xl"></i>
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-800 to-red-600 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
+                            <i class="fas fa-music text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-yellow-400 mb-4">MISI</h3>
-                            <ul class="text-gray-200 space-y-3 text-lg">
+                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">MISI</h3>
+                            <ul class="text-gray-200 space-y-3 text-lg md:text-xl">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span></span>
@@ -309,12 +314,19 @@
         </div>
 
         <!-- Logo Bulat -->
-        <div class="flex justify-center mb-16">
-            <div class="marching-logo w-40 h-40 rounded-full flex items-center justify-center mx-auto">
-                <img 
-                    src="242104513_266398215333645_4612524844173446882_n.jpg" 
+        <div class="flex justify-center items-center space-x-2 md:space-x-8 mb-16">
+            <div class="marching-logo w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center">
+                <img
+                    src="kwarda.jpg"
                     alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
-                    class="w-28 h-28 rounded-full"
+                    class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full"
+                >
+            </div>
+            <div class="marching-logo w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center">
+                <img
+                    src="242104513_266398215333645_4612524844173446882_n.jpg"
+                    alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
+                    class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full"
                 >
             </div>
         </div>
