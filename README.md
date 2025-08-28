@@ -1,8 +1,8 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200">
     <title>Daffa Arridho - Marching Band Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -61,11 +61,11 @@
         
         .profile-image {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 4px solid var(--marching-gold);
-            border-radius: 15px;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 30px rgba(255, 215, 0, 0.4);
+            border: 2px solid var(--marching-gold);
+            border-radius: 10px;
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(255, 215, 0, 0.4);
         }
         
         .profile-image:hover {
@@ -236,155 +236,10 @@
             }
         }
 
-        /* Mobile-specific optimizations */
-        @media (max-width: 640px) {
-            body {
-                padding: 4px;
-                font-size: 14px;
-            }
-
-            .marching-container {
-                border-radius: 12px;
-                margin: 2px;
-                padding: 0.75rem;
-                border-width: 2px;
-            }
-
-            /* Smaller profile image for mobile */
-            .profile-image {
-                width: 160px !important;
-                height: 160px !important;
-                margin-bottom: 1rem !important;
-            }
-
-            .vision-card {
-                margin-bottom: 1rem;
-                padding: 0.75rem;
-                border-left-width: 3px;
-            }
-
-            .name-plate {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-            }
-
-            .marching-title {
-                font-size: 1.5rem;
-                line-height: 1.2;
-                letter-spacing: 0.5px;
-            }
-
-            /* Main title smaller on mobile */
-            .marching-container h1.marching-title {
-                font-size: 1.75rem;
-                margin-bottom: 0.5rem;
-            }
-
-            /* Subtitle smaller */
-            .marching-container p.text-gray-200 {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
-
-            /* Improve readability on mobile */
-            .vision-content {
-                word-wrap: break-word;
-                hyphens: auto;
-                font-size: 1rem;
-                line-height: 1.6;
-                font-weight: 500;
-            }
-
-            /* Mission list better spacing */
-            .vision-card ul li {
-                margin-bottom: 0.75rem;
-            }
-
-            .vision-card ul li span:first-child {
-                margin-top: 0.25rem;
-            }
-
-            /* Better contrast for mobile */
-            .text-gray-200 {
-                color: #e5e7eb !important;
-            }
-
-            .text-gray-300 {
-                color: #d1d5db !important;
-            }
-
-            /* Larger touch targets */
-            .instagram-link {
-                min-width: 60px;
-                min-height: 60px;
-                width: 60px;
-                height: 60px;
-            }
-
-            /* Logo smaller on mobile */
-            .marching-logo {
-                width: 60px !important;
-                height: 60px !important;
-            }
-
-            .marching-logo img {
-                width: 48px !important;
-                height: 48px !important;
-            }
-
-            /* Social media section */
-            .instagram-link {
-                width: 60px !important;
-                height: 60px !important;
-            }
-
-            /* Footer adjustments */
-            .text-center span {
-                font-size: 1.5rem;
-            }
-
-            /* Music button position */
-            .fixed.bottom-4.left-4 {
-                bottom: 1rem;
-                left: 1rem;
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-            }
-
-            /* Improve spacing */
-            .space-y-6 > * + * {
-                margin-top: 1rem;
-            }
-
-            .space-y-8 > * + * {
-                margin-top: 1.5rem;
-            }
-
-            /* Grid adjustments for mobile */
-            .grid.grid-cols-1.lg\\:grid-cols-2 {
-                gap: 1.5rem;
-            }
-
-            /* Card titles smaller */
-            .vision-card h3 {
-                font-size: 1.25rem;
-                margin-bottom: 0.75rem;
-            }
-
-            /* Icon sizes */
-            .vision-card .w-12.h-12 {
-                width: 40px !important;
-                height: 40px !important;
-            }
-
-            .vision-card i {
-                font-size: 1.25rem !important;
-            }
-        }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
-    <div class="marching-container w-full max-w-6xl mx-auto p-3 sm:p-4 md:p-6 lg:p-12 relative overflow-hidden">
+    <div class="marching-container w-full max-w-6xl mx-auto p-12 relative overflow-hidden" style="width: 1200px; margin: 0 auto;">
         <!-- Floating Music Instruments Background - Hidden on mobile for cleaner look -->
         <div class="hidden sm:block absolute top-8 left-8 text-4xl md:text-5xl instrument-float" style="animation-delay: 0s; color: #FF6B6B;">🎷</div>
         <div class="hidden sm:block absolute top-20 right-12 text-3xl md:text-4xl instrument-float" style="animation-delay: 2s; color: #FFD700;">🥁</div>
@@ -399,10 +254,10 @@
 
         <!-- Header -->
         <div class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 class="marching-title font-bold mb-6" style="font-size: 48px;">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-200 text-base sm:text-lg md:text-xl font-light italic mb-6">
+            <p class="text-gray-200 font-light italic mb-6" style="font-size: 18px;">
                • KWARDA KEPULAUAN RIAU •
             </p>
         </div>
@@ -410,15 +265,15 @@
 
 
         <!-- Main Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-14 lg:gap-20 items-start mb-10 sm:mb-14 md:mb-18">
+        <div class="flex gap-20 items-start mb-18" style="display: flex; gap: 80px;">
             <!-- Profile Section - Foto dan Nama -->
-            <div class="profile-section pr-0 lg:pr-12">
+            <div class="profile-section" style="width: 400px; flex-shrink: 0;">
                 <div class="text-center">
                     <!-- Foto -->
-                    <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
-                    <h2 class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
+                    <div class="name-plate px-2 py-1 rounded-md inline-block mb-2 text-center mx-auto">
+                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 14px;">KANDIDAT DANCROPS NO 1</h2>
                 </div>
-                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] overflow-hidden image-loading">
+                    <div class="profile-image mx-auto mb-6 overflow-hidden image-loading" style="width: 300px; height: 300px;">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
@@ -430,12 +285,12 @@
                     </div>
                     
                     <!-- Nama Daffa Arridho -->
-                    <div class="name-plate px-4 py-2 rounded-lg inline-block">
-                        <h1 class="marching-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                    <div class="name-plate px-2 py-1 rounded-md inline-block">
+                        <h1 class="marching-title font-bold mb-1" style="font-size: 24px;">
                 Daffa Arridho
             </h1>
 
-                        <p class="text-gray-200 text-xs">Tuba player • MB.Tunas Gurindam Corps </p>
+                        <p class="text-gray-200" style="font-size: 11px;">Tuba player • MB.Tunas Gurindam Corps </p>
                     </div>
                 </div>
             </div>
@@ -444,7 +299,7 @@
             
 
             <!-- Visi Misi Section -->
-           <div class="space-y-8 sm:space-y-10 md:space-y-12">
+           <div class="space-y-12" style="width: 600px; flex-shrink: 0;">
                 <!-- Visi -->
                 <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
@@ -452,8 +307,8 @@
                             <i class="fas fa-eye text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">VISI</h3>
-                            <p class="vision-content text-gray-200 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 24px;">VISI</h3>
+                            <p class="vision-content text-gray-200" style="font-size: 18px;">
                                 Menjadikan marching band tunas gurundam yg berprestasi disiplin creative dan mampu mengharumkan nama marching band tunas gurindam melalui seni musik dan penampilan yg berkualitas.
                             </p>
                         </div>
@@ -467,15 +322,15 @@
                             <i class="fas fa-music text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">MISI</h3>
-                            <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 24px;">MISI</h3>
+                            <ul class="text-gray-200 space-y-4" style="font-size: 16px;">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>meningkatkan kedisplinan kekompakan dan tanggung jawab sesama anggota.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>mengembangkan keterampilan musik dan teknik marching.</span>
+                                    <span>mengenbangkan keterampilan musik dan teknik marching.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
@@ -493,8 +348,8 @@
                             <i class="fas fa-clipboard-list text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">PROGRAM</h3>
-                            <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 24px;">PROGRAM</h3>
+                            <ul class="text-gray-200 space-y-4" style="font-size: 16px;">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>Program senam pagi bersama setiap 1 bulan sekali</span>
@@ -605,7 +460,7 @@
 
             // Set volume
             if (bgMusic) {
-                bgMusic.volume = 0.6; // 60% volume
+                bgMusic.volume = 0.3; // 30% volume
             }
 
             // Function to start music
@@ -621,9 +476,17 @@
                 }
             }
 
-            // Add event listeners for user interaction
+            // Add event listeners for user interaction - play music on any tap/press
             document.addEventListener('click', startMusic);
             document.addEventListener('touchstart', startMusic);
+            document.addEventListener('touchend', startMusic);
+            document.addEventListener('pointerdown', startMusic);
+
+            // Also add to body for better mobile support
+            document.body.addEventListener('click', startMusic);
+            document.body.addEventListener('touchstart', startMusic);
+            document.body.addEventListener('touchend', startMusic);
+            document.body.addEventListener('pointerdown', startMusic);
 
             // Add simple music control button
             const musicBtn = document.createElement('button');
