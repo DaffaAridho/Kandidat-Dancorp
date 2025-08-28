@@ -240,7 +240,7 @@
                     <!-- Foto -->
                     <div class="profile-image mx-auto mb-8 w-64 h-64 overflow-hidden">
                         <img 
-                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fad69db3-40c8-47e5-9ef6-0b814cb6f597.png" 
+                            src="223344.jpg" 
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
                             class="w-full h-full object-cover"
                             onerror="this.src='https://placehold.co/400x400/B22234/FFFFFF?text=Daffa+Arridho'"
