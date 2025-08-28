@@ -327,7 +327,7 @@
                     <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
                     <h2 class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
                 </div>
-                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] overflow-hidden image-loading">
+                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] overflow-hidden image-loading">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
