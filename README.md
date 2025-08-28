@@ -254,12 +254,9 @@
             <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-300 text-base sm:text-lg md:text-xl font-light italic mb-4">
+            <p class="text-gray-300 text-base sm:text-lg md:text-xl font-light italic mb-6">
                • KWARDA KEPULAUAN RIAU •
             </p>
-            <div class="w-full mb-8 px-4">
-                <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-            </div>
         </div>
 
 
