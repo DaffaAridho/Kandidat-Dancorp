@@ -21,7 +21,6 @@
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--marching-navy) 0%, #000080 50%, var(--marching-black) 100%);
-            background-image:
             min-height: 100vh;
             margin: 0;
             padding: 20px;
@@ -436,7 +435,7 @@
                 <div class="text-center">
                     <!-- Teks di atas -->
                     <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
-                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 24px;">KANDIDAT DANCROPS NO 1</h2>
+                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 18px;">KANDIDAT DANCROPS NO 1</h2>
                 </div>
 
                     <!-- Foto dipindahkan ke atas nama -->
@@ -641,7 +640,7 @@
     <!-- Background Music - Plays on User Interaction -->
     <audio id="bgMusic" loop preload="auto" style="display: none;">
         <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
-        <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
+        <source src="background-music.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
 
