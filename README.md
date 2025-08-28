@@ -191,6 +191,30 @@
             animation: instrumentFloat 6s ease-in-out infinite;
         }
 
+        /* Image loading states */
+        .image-loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .profile-image img {
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-image img[loading] {
+            opacity: 0;
+        }
+
+        .profile-image img[loaded] {
+            opacity: 1;
+        }
+
         .vision-content {
             font-family: 'Playfair Display', serif;
             font-weight: 400;
@@ -217,20 +241,53 @@
             .marching-container {
                 border-radius: 15px;
                 margin: 5px;
+                padding: 1rem;
             }
 
             .vision-card {
                 margin-bottom: 1rem;
+                padding: 1rem;
             }
 
             .name-plate {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
 
-            /* Ensure text doesn't overflow on small screens */
+            .marching-title {
+                font-size: 1.75rem;
+                line-height: 1.2;
+            }
+
+            /* Improve readability on mobile */
             .vision-content {
                 word-wrap: break-word;
                 hyphens: auto;
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+
+            /* Better contrast for mobile */
+            .text-gray-200 {
+                color: #e5e7eb !important;
+            }
+
+            .text-gray-300 {
+                color: #d1d5db !important;
+            }
+
+            /* Larger touch targets */
+            .instagram-link {
+                min-width: 60px;
+                min-height: 60px;
+            }
+
+            /* Improve spacing */
+            .space-y-6 > * + * {
+                margin-top: 1.5rem;
+            }
+
+            .space-y-8 > * + * {
+                margin-top: 2rem;
             }
         }
     </style>
@@ -254,7 +311,7 @@
             <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-300 text-base sm:text-lg md:text-xl font-light italic mb-6">
+            <p class="text-gray-200 text-base sm:text-lg md:text-xl font-light italic mb-6">
                • KWARDA KEPULAUAN RIAU •
             </p>
         </div>
@@ -262,7 +319,7 @@
 
 
         <!-- Main Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start mb-8 sm:mb-12 md:mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-14 lg:gap-20 items-start mb-10 sm:mb-14 md:mb-18">
             <!-- Profile Section - Foto dan Nama -->
             <div class="profile-section pr-0 lg:pr-12">
                 <div class="text-center">
@@ -270,12 +327,14 @@
                     <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4">
                     <h2 class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
                 </div>
-                    <div class="profile-image mx-auto mb-6 sm:mb-8 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden">
+                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden image-loading">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
                             class="w-full h-full object-contain"
-                            onerror="this.src='223344.jpg'"
+                            loading="lazy"
+                            onload="this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
+                            onerror="this.src='223344.jpg'; this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
                         >
                     </div>
                     
@@ -294,7 +353,7 @@
             
 
             <!-- Visi Misi Section -->
-            <div class="space-y-6 sm:space-y-8 md:space-y-10">
+           <div class="space-y-8 sm:space-y-10 md:space-y-12">
                 <!-- Visi -->
                 <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
@@ -303,7 +362,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">VISI</h3>
-                            <p class="vision-content text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                            <p class="vision-content text-gray-200 text-lg sm:text-xl md:text-2xl lg:text-3xl">
 
                             </p>
                         </div>
@@ -318,7 +377,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">MISI</h3>
-                            <ul class="text-gray-200 space-y-3 text-lg md:text-xl">
+                            <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span></span>
@@ -348,7 +407,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">PROGRAM</h3>
-                            <ul class="text-gray-200 space-y-3 text-lg md:text-xl">
+                            <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>Program senam pagi bersama setiap 1 bulan sekali</span>
@@ -370,18 +429,24 @@
 
         <!-- Logo Bulat -->
         <div class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8 mb-8 sm:mb-12 md:mb-16">
-            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center">
+            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center image-loading">
                 <img
                     src="kwarda.jpg"
                     alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
                     class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full"
+                    loading="lazy"
+                    onload="this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
+                    onerror="this.style.display='none'"
                 >
             </div>
-            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center">
+            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center image-loading">
                 <img
                     src="242104513_266398215333645_4612524844173446882_n.jpg"
                     alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
                     class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full"
+                    loading="lazy"
+                    onload="this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
+                    onerror="this.style.display='none'"
                 >
             </div>
         </div>
@@ -411,11 +476,11 @@
                     <span class="text-white font-bold bg-red-600 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@daffaridhooo_</span>
                     <span class="text-white font-bold bg-blue-800 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@tunasgurindam</span>
                 </div>
-                <p class="text-gray-300 text-sm mt-6 italic">
+                <p class="text-gray-200 text-sm mt-6 italic">
                     Saksikan momen spesial, latihan, dan pertunjukan spektakuler kami!
                 </p>
-                <p class="text-gray-300 text-sm mt-6 italic">
-                    #TunasGurindamCorps #TGC #AKT6 
+                <p class="text-gray-200 text-sm mt-6 italic">
+                    #TunasGurindamCorps #TGC #AKT6
                 </p>
             </div>
         </div>
@@ -429,7 +494,7 @@
                 <span class="text-3xl text-red-500">🎷</span>
                 <span class="text-3xl text-yellow-400">📯</span>
             </div>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-300 text-sm">
                 © 2025 Daffa Arridho • Marching Band Tunas Gurindam Corps • Dancorp
             </p>
         </div>
