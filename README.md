@@ -478,7 +478,7 @@
                         <div>
                             <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">VISI</h3>
                             <p class="vision-content text-gray-200" style="font-size: 20px;">
-                                Menjadikan marching band tunas gurundam yg berprestasi disiplin creative dan mampu mengharumkan nama marching band tunas gurindam melalui seni musik dan penampilan yg berkualitas.
+                               Menjadikan Marching Band Tunas Guridam Corps yang berprestasi, disiplin, kreatif dan mampu mengharumkan nama marching band tunas gurindam melalui Penampilan dan kejuaran di tingkat Kota, Provinsi, bahkan Nasional.
                             </p>
                         </div>
                     </div>
@@ -499,11 +499,15 @@
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>mengembangkan keterampilan musik dan teknik marching.</span>
+                                    <span>Mengembangkan keterampilan musik dan teknik Marching Band</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba.</span>
+                                    <span>Menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
+                                    <span> Membentuk karakter anggota sebagai sosok BRAVARA Sejati</span>
                                 </li>
                             </ul>
                         </div>
