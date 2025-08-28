@@ -175,7 +175,8 @@
             letter-spacing: 1px;
         }
         
-        .marching-title::after {
+        /* Removed decorative line below marching title */
+        /* .marching-title::after {
             content: '';
             position: absolute;
             bottom: -12px;
@@ -184,7 +185,7 @@
             width: 100px;
             height: 3px;
             background: linear-gradient(90deg, transparent, var(--marching-gold), transparent);
-        }
+        } */
         
         .instrument-float {
             animation: instrumentFloat 6s ease-in-out infinite;
