@@ -238,10 +238,10 @@
             <div class="profile-section pr-0 lg:pr-12">
                 <div class="text-center">
                     <!-- Foto -->
-                    <div class="name-plate px-8 py-4 rounded-lg inline-block mb-6">
-                        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
-                    </div>
-                    <div class="profile-image mx-auto mb-8 w-64 h-64 md:w-80 md:h-80 overflow-hidden">
+                    <div class="name-plate px-6 py-3 rounded-lg inline-block mb-6">
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
+                </div>
+                    <div class="profile-image mx-auto mb-8 w-80 h-80 md:w-96 md:h-96 overflow-hidden">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
@@ -251,8 +251,8 @@
                     </div>
                     
                     <!-- Nama Daffa Arridho -->
-                    <div class="name-plate px-8 py-4 rounded-lg inline-block">
-                        <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                    <div class="name-plate px-6 py-3 rounded-lg inline-block">
+                        <h1 class="marching-title text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
                 Daffa Arridho
             </h1>
                         
@@ -358,6 +358,9 @@
                 </div>
                 <p class="text-gray-300 text-sm mt-6 italic">
                     Saksikan momen spesial, latihan, dan pertunjukan spektakuler kami!
+                </p>
+                <p class="text-gray-300 text-sm mt-6 italic">
+                    #TunasGurindamCorps #TGC #AKT6 
                 </p>
             </div>
         </div>
