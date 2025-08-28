@@ -475,7 +475,7 @@
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>mengenbangkan keterampilan musik dan teknik marching.</span>
+                                    <span>mengembangkan keterampilan musik dan teknik marching.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
