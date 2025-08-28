@@ -238,32 +238,70 @@
 
         /* Mobile-specific optimizations */
         @media (max-width: 640px) {
+            body {
+                padding: 4px;
+                font-size: 14px;
+            }
+
             .marching-container {
-                border-radius: 15px;
-                margin: 5px;
-                padding: 1rem;
+                border-radius: 12px;
+                margin: 2px;
+                padding: 0.75rem;
+                border-width: 2px;
+            }
+
+            /* Smaller profile image for mobile */
+            .profile-image {
+                width: 160px !important;
+                height: 160px !important;
+                margin-bottom: 1rem !important;
             }
 
             .vision-card {
                 margin-bottom: 1rem;
-                padding: 1rem;
+                padding: 0.75rem;
+                border-left-width: 3px;
             }
 
             .name-plate {
-                font-size: 1rem;
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
             }
 
             .marching-title {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 line-height: 1.2;
+                letter-spacing: 0.5px;
+            }
+
+            /* Main title smaller on mobile */
+            .marching-container h1.marching-title {
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            /* Subtitle smaller */
+            .marching-container p.text-gray-200 {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
             }
 
             /* Improve readability on mobile */
             .vision-content {
                 word-wrap: break-word;
                 hyphens: auto;
-                font-size: 1.1rem;
-                line-height: 1.5;
+                font-size: 1rem;
+                line-height: 1.6;
+                font-weight: 500;
+            }
+
+            /* Mission list better spacing */
+            .vision-card ul li {
+                margin-bottom: 0.75rem;
+            }
+
+            .vision-card ul li span:first-child {
+                margin-top: 0.25rem;
             }
 
             /* Better contrast for mobile */
@@ -279,15 +317,68 @@
             .instagram-link {
                 min-width: 60px;
                 min-height: 60px;
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Logo smaller on mobile */
+            .marching-logo {
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .marching-logo img {
+                width: 48px !important;
+                height: 48px !important;
+            }
+
+            /* Social media section */
+            .instagram-link {
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            /* Footer adjustments */
+            .text-center span {
+                font-size: 1.5rem;
+            }
+
+            /* Music button position */
+            .fixed.bottom-4.left-4 {
+                bottom: 1rem;
+                left: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
             }
 
             /* Improve spacing */
             .space-y-6 > * + * {
-                margin-top: 1.5rem;
+                margin-top: 1rem;
             }
 
             .space-y-8 > * + * {
-                margin-top: 2rem;
+                margin-top: 1.5rem;
+            }
+
+            /* Grid adjustments for mobile */
+            .grid.grid-cols-1.lg\\:grid-cols-2 {
+                gap: 1.5rem;
+            }
+
+            /* Card titles smaller */
+            .vision-card h3 {
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+
+            /* Icon sizes */
+            .vision-card .w-12.h-12 {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            .vision-card i {
+                font-size: 1.25rem !important;
             }
         }
     </style>
@@ -363,7 +454,7 @@
                         <div>
                             <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">VISI</h3>
                             <p class="vision-content text-gray-200 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-
+                                Menjadikan marching band tunas gurundam yg berprestasi disiplin creative dan mampu mengharumkan nama marching band tunas gurindam melalui seni musik dan penampilan yg berkualitas.
                             </p>
                         </div>
                     </div>
@@ -380,19 +471,15 @@
                             <ul class="text-gray-200 space-y-4 text-lg md:text-xl">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span></span>
+                                    <span>meningkatkan kedisplinan kekompakan dan tanggung jawab sesama anggota.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span></span>
+                                    <span>mengenbangkan keterampilan musik dan teknik marching.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span></span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span></span>
+                                    <span>menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba.</span>
                                 </li>
                             </ul>
                         </div>
