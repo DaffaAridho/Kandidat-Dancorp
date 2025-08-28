@@ -1,7 +1,14 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="id">
 <head>
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daffa Arridho - Marching Band Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+        
         :root {
             --marching-red: #B22234;
             --marching-gold: #FFD700;
@@ -317,10 +324,10 @@
             <div class="profile-section pr-0 lg:pr-12">
                 <div class="text-center">
                     <!-- Foto -->
-                    <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4">
+                    <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
                     <h2 class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
                 </div>
-                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden image-loading">
+                    <div class="profile-image mx-auto mb-4 sm:mb-6 md:mb-8 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] overflow-hidden image-loading">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
@@ -333,7 +340,7 @@
                     
                     <!-- Nama Daffa Arridho -->
                     <div class="name-plate px-4 py-2 rounded-lg inline-block">
-                        <h1 class="marching-title text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+                        <h1 class="marching-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 Daffa Arridho
             </h1>
 
@@ -489,6 +496,9 @@
             </div>
             <p class="text-gray-300 text-sm">
                 © 2025 Daffa Arridho • Marching Band Tunas Gurindam Corps • Dancorp
+            </p>
+             <p class="text-gray-300 text-sm">
+                © 2025 Vareno Oka Lisandi • Web Operator
             </p>
         </div>
     </div>
