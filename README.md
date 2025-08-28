@@ -435,8 +435,7 @@
                 <div class="text-center">
                     <!-- Teks di atas -->
                     <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
-                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 18px;">KANDIDAT DANCROPS</h2>
-                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 18px;">NO 1</h2>
+                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 18px;">KANDIDAT DANCROPS NO 01</h2>
                 </div>
 
                     <!-- Foto dipindahkan ke atas nama -->
