@@ -27,7 +27,7 @@
                 radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 8px;
             color: var(--marching-white);
             position: relative;
             overflow-x: hidden;
@@ -189,43 +189,71 @@
         .instrument-float {
             animation: instrumentFloat 6s ease-in-out infinite;
         }
-        
+
+        .vision-content {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
         @keyframes instrumentFloat {
-            0%, 100% { 
+            0%, 100% {
                 transform: translateY(0px) rotate(0deg) scale(1);
                 filter: drop-shadow(0 5px 15px rgba(255, 215, 0, 0.4));
             }
-            33% { 
+            33% {
                 transform: translateY(-20px) rotate(-10deg) scale(1.1);
                 filter: drop-shadow(0 10px 20px rgba(255, 215, 0, 0.6));
             }
-            66% { 
+            66% {
                 transform: translateY(-10px) rotate(10deg) scale(1.05);
                 filter: drop-shadow(0 8px 18px rgba(255, 215, 0, 0.5));
+            }
+        }
+
+        /* Mobile-specific optimizations */
+        @media (max-width: 640px) {
+            .marching-container {
+                border-radius: 15px;
+                margin: 5px;
+            }
+
+            .vision-card {
+                margin-bottom: 1rem;
+            }
+
+            .name-plate {
+                font-size: 0.9rem;
+            }
+
+            /* Ensure text doesn't overflow on small screens */
+            .vision-content {
+                word-wrap: break-word;
+                hyphens: auto;
             }
         }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
-    <div class="marching-container w-full max-w-6xl mx-auto p-8 md:p-12 relative overflow-hidden">
-        <!-- Floating Music Instruments Background -->
-        <div class="absolute top-8 left-8 text-5xl instrument-float" style="animation-delay: 0s; color: #FF6B6B;">🎷</div>
-        <div class="absolute top-20 right-12 text-4xl instrument-float" style="animation-delay: 2s; color: #FFD700;">🥁</div>
-        <div class="absolute bottom-16 left-16 text-5xl instrument-float" style="animation-delay: 4s; color: #4ECDC4;">🎺</div>
-        <div class="absolute bottom-8 right-8 text-4xl instrument-float" style="animation-delay: 1s; color: #FFE66D;">🎻</div>
-        
-        <!-- Floating Music Notes -->
-        <div class="absolute top-1/4 left-1/4 text-3xl music-note" style="animation-delay: 0.5s;">♪</div>
-        <div class="absolute top-1/3 right-1/3 text-2xl music-note" style="animation-delay: 1.5s;">♫</div>
-        <div class="absolute bottom-1/4 left-1/3 text-3xl music-note" style="animation-delay: 2.5s;">🎵</div>
-        <div class="absolute bottom-1/3 right-1/4 text-2xl music-note" style="animation-delay: 3.5s;">♩</div>
+    <div class="marching-container w-full max-w-6xl mx-auto p-3 sm:p-4 md:p-6 lg:p-12 relative overflow-hidden">
+        <!-- Floating Music Instruments Background - Hidden on mobile for cleaner look -->
+        <div class="hidden sm:block absolute top-8 left-8 text-4xl md:text-5xl instrument-float" style="animation-delay: 0s; color: #FF6B6B;">🎷</div>
+        <div class="hidden sm:block absolute top-20 right-12 text-3xl md:text-4xl instrument-float" style="animation-delay: 2s; color: #FFD700;">🥁</div>
+        <div class="hidden sm:block absolute bottom-16 left-16 text-4xl md:text-5xl instrument-float" style="animation-delay: 4s; color: #4ECDC4;">🎺</div>
+        <div class="hidden sm:block absolute bottom-8 right-8 text-3xl md:text-4xl instrument-float" style="animation-delay: 1s; color: #FFE66D;">🎻</div>
+
+        <!-- Floating Music Notes - Hidden on mobile for cleaner look -->
+        <div class="hidden sm:block absolute top-1/4 left-1/4 text-3xl music-note" style="animation-delay: 0.5s;">♪</div>
+        <div class="hidden sm:block absolute top-1/3 right-1/3 text-2xl music-note" style="animation-delay: 1.5s;">♫</div>
+        <div class="hidden sm:block absolute bottom-1/4 left-1/3 text-3xl music-note" style="animation-delay: 2.5s;">🎵</div>
+        <div class="hidden sm:block absolute bottom-1/3 right-1/4 text-2xl music-note" style="animation-delay: 3.5s;">♩</div>
 
         <!-- Header -->
-        <div class="text-center mb-16">
-            <h1 class="marching-title text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+        <div class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h1 class="marching-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 MB. TUNAS GURINDAM CORPS
             </h1>
-            <p class="text-gray-300 text-lg sm:text-xl font-light italic">
+            <p class="text-gray-300 text-base sm:text-lg md:text-xl font-light italic">
                • KWARDA KEPULAUAN RIAU •
             </p>
         </div>
@@ -233,15 +261,15 @@
 
 
         <!-- Main Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start mb-8 sm:mb-12 md:mb-16">
             <!-- Profile Section - Foto dan Nama -->
             <div class="profile-section pr-0 lg:pr-12">
                 <div class="text-center">
                     <!-- Foto -->
-                    <div class="name-plate px-6 py-3 rounded-lg inline-block mb-6">
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
+                    <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4">
+                    <h2 class="text-base sm:text-lg md:text-xl font-bold text-yellow-400 marching-title">KANDIDAT DANCROPS NO 1</h2>
                 </div>
-                    <div class="profile-image mx-auto mb-8 w-80 h-80 md:w-96 md:h-96 overflow-hidden">
+                    <div class="profile-image mx-auto mb-6 sm:mb-8 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden">
                         <img
                             src="223344.jpg"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
@@ -251,12 +279,12 @@
                     </div>
                     
                     <!-- Nama Daffa Arridho -->
-                    <div class="name-plate px-6 py-3 rounded-lg inline-block">
-                        <h1 class="marching-title text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                    <div class="name-plate px-4 py-2 rounded-lg inline-block">
+                        <h1 class="marching-title text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                 Daffa Arridho
             </h1>
-                        
-                        <p class="text-gray-200 text-sm">Tuba player • MB.Tunas Gurindam Corps </p>
+
+                        <p class="text-gray-200 text-xs">Tuba player • MB.Tunas Gurindam Corps </p>
                     </div>
                 </div>
             </div>
@@ -265,16 +293,16 @@
             
 
             <!-- Visi Misi Section -->
-            <div class="space-y-10">
+            <div class="space-y-6 sm:space-y-8 md:space-y-10">
                 <!-- Visi -->
-                <div class="vision-card p-6 md:p-10 rounded-xl">
+                <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
                         <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
                             <i class="fas fa-eye text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
                             <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">VISI</h3>
-                            <p class="text-gray-200 leading-relaxed text-lg md:text-xl">
+                            <p class="vision-content text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
 
                             </p>
                         </div>
@@ -282,7 +310,7 @@
                 </div>
 
                 <!-- Misi -->
-                <div class="vision-card p-6 md:p-10 rounded-xl">
+                <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
                     <div class="flex items-start mb-5">
                         <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-800 to-red-600 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
                             <i class="fas fa-music text-white text-2xl md:text-3xl"></i>
@@ -310,51 +338,77 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Program -->
+                <div class="vision-card p-4 sm:p-6 md:p-10 rounded-xl">
+                    <div class="flex items-start mb-5">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-600 to-yellow-500 rounded-full flex items-center justify-center mr-3 md:mr-5 shadow-xl">
+                            <i class="fas fa-clipboard-list text-white text-2xl md:text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">PROGRAM</h3>
+                            <ul class="text-gray-200 space-y-3 text-lg md:text-xl">
+                                <li class="flex items-start">
+                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
+                                    <span>Program senam pagi bersama setiap 1 bulan sekali</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
+                                    <span>Rapat bulanan tim inti</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
+                                    <span>Outbound setiap 6 bulan sekali di setiap liburan semester</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Logo Bulat -->
-        <div class="flex justify-center items-center space-x-2 md:space-x-8 mb-16">
-            <div class="marching-logo w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center">
+        <div class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8 mb-8 sm:mb-12 md:mb-16">
+            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center">
                 <img
                     src="kwarda.jpg"
                     alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
-                    class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full"
+                    class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full"
                 >
             </div>
-            <div class="marching-logo w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center">
+            <div class="marching-logo w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex items-center justify-center">
                 <img
                     src="242104513_266398215333645_4612524844173446882_n.jpg"
                     alt="Logo marching band dengan desain perisai merah dan emas, simbol trumpet dengan mahkota daun, latar belakang navy blue"
-                    class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full"
+                    class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full"
                 >
             </div>
         </div>
 
         <!-- Media Sosial Instagram -->
         <div class="text-center">
-            <h3 class="text-2xl font-bold text-yellow-400 mb-10">
+            <h3 class="text-xl sm:text-2xl font-bold text-yellow-400 mb-6 sm:mb-8 md:mb-10">
                 MEDIA SOSIAL
             </h3>
             
-            <div class="flex justify-center space-x-10 mb-8">
+            <div class="flex justify-center space-x-6 sm:space-x-8 md:space-x-10 mb-6 sm:mb-8">
                 <!-- Instagram Link 1 -->
-                <a href="https://www.instagram.com/daffaridhooo_/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagram-link w-20 h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
+                <a href="https://www.instagram.com/daffaridhooo_/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
+                    <i class="fab fa-instagram text-white text-2xl sm:text-3xl"></i>
                 </a>
 
                 <!-- Instagram Link 2 -->
-                <a href="https://www.instagram.com/tunasgurindam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link w-20 h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
+                <a href="https://www.instagram.com/tunasgurindam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
+                    <i class="fab fa-instagram text-white text-2xl sm:text-3xl"></i>
                 </a>
             </div>
 
             <!-- Nama Akun Instagram -->
             <div class="text-center">
                 <p class="text-gray-300 text-lg mb-4">Follow akun Instagram:</p>
-                <div class="flex justify-center space-x-8 flex-wrap gap-4">
-                    <span class="text-white font-bold bg-red-600 px-6 py-3 rounded-full border-2 border-yellow-400 text-lg">@daffaridhooo_</span>
-                    <span class="text-white font-bold bg-blue-800 px-6 py-3 rounded-full border-2 border-yellow-400 text-lg">@tunasgurindam</span>
+                <div class="flex justify-center space-x-4 sm:space-x-6 md:space-x-8 flex-wrap gap-3 sm:gap-4">
+                    <span class="text-white font-bold bg-red-600 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@daffaridhooo_</span>
+                    <span class="text-white font-bold bg-blue-800 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@tunasgurindam</span>
                 </div>
                 <p class="text-gray-300 text-sm mt-6 italic">
                     Saksikan momen spesial, latihan, dan pertunjukan spektakuler kami!
@@ -366,7 +420,7 @@
         </div>
 
         <!-- Footer -->
-        <div class="text-center mt-20 pt-8 border-t border-yellow-400 border-opacity-30">
+        <div class="text-center mt-12 sm:mt-16 md:mt-20 pt-6 sm:pt-8 border-t border-yellow-400 border-opacity-30">
             <div class="flex justify-center space-x-6 mb-4">
                 <span class="text-3xl text-yellow-400">🎵</span>
                 <span class="text-3xl text-red-500">🎺</span>
