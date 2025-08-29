@@ -644,6 +644,7 @@
         Your browser does not support the audio element.
     </audio>
 
+
     <script>
         // Background Music - Plays on User Interaction
         document.addEventListener('DOMContentLoaded', function() {
@@ -652,7 +653,7 @@
 
             // Set volume
             if (bgMusic) {
-                bgMusic.volume = 0.8; // 80% volume
+                bgMusic.volume = 0.8; // 100% volume
             }
 
             // Function to start music
