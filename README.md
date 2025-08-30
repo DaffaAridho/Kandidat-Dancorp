@@ -639,8 +639,8 @@
 
     <!-- Background Music - Plays on User Interaction -->
     <audio id="bgMusic" loop preload="auto" style="display: none;">
-        <source src="Awards CSOLO PITOK2.mp3" type="audio/mpeg">
-        <source src="Awards CSOLO PITOK2.mp3" type="audio/mpeg">
+        <source src="SOLO PITOK2.mp3" type="audio/mpeg">
+        <source src="SOLO PITOK2.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -653,7 +653,7 @@
 
             // Set volume
             if (bgMusic) {
-                bgMusic.volume = 0.8; // 100% volume
+                bgMusic.volume = 0.8; // 90% volume
             }
 
             // Function to start music
