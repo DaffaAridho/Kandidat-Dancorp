@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,9 @@
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--marching-navy) 0%, #000080 50%, var(--marching-black) 100%);
-            background-image: 
-                url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40,40 C60,20 140,20 160,40 C180,60 180,140 160,160 C140,180 60,180 40,160 C20,140 20,60 40,40 Z' stroke='rgba(178,34,52,0.15)' stroke-width='2' fill='none'/%3E%3Cpath d='M80,80 C90,70 110,70 120,80 C130,90 130,110 120,120 C110,130 90,130 80,120 C70,110 70,90 80,80 Z' stroke='rgba(255,215,0,0.15)' stroke-width='1' fill='none'/%3E%3C/svg%3E"),
-                radial-gradient(circle at 20% 30%, rgba(178, 34, 52, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
             min-height: 100vh;
             margin: 0;
-            padding: 8px;
+            padding: 20px;
             color: var(--marching-white);
             position: relative;
             overflow-x: hidden;
@@ -236,6 +232,174 @@
             }
         }
 
+        /* Mobile responsive styles for full display */
+        @media (max-width: 640px) {
+            body {
+                padding: 4px;
+                font-size: 14px;
+            }
+
+            .marching-container {
+                border-radius: 12px;
+                margin: 2px;
+                padding: 0.75rem;
+                border-width: 2px;
+            }
+
+            /* Full width profile image on mobile */
+            .profile-image {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 280px;
+                margin: 0 auto 1rem !important;
+            }
+
+            .vision-card {
+                margin-bottom: 1rem;
+                padding: 0.75rem;
+                border-left-width: 3px;
+            }
+
+            .name-plate {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .marching-title {
+                font-size: 1.5rem;
+                line-height: 1.2;
+                letter-spacing: 0.5px;
+            }
+
+            /* Main title smaller on mobile */
+            .marching-container h1.marching-title {
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            /* Subtitle smaller */
+            .marching-container p.text-gray-200 {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Improve readability on mobile */
+            .vision-content {
+                word-wrap: break-word;
+                hyphens: auto;
+                font-size: 1rem;
+                line-height: 1.6;
+                font-weight: 500;
+            }
+
+            /* Mission list better spacing */
+            .vision-card ul li {
+                margin-bottom: 0.75rem;
+            }
+
+            .vision-card ul li span:first-child {
+                margin-top: 0.25rem;
+            }
+
+            /* Better contrast for mobile */
+            .text-gray-200 {
+                color: #e5e7eb !important;
+            }
+
+            .text-gray-300 {
+                color: #d1d5db !important;
+            }
+
+            /* Larger touch targets */
+            .instagram-link {
+                min-width: 60px;
+                min-height: 60px;
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Logo smaller on mobile */
+            .marching-logo {
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .marching-logo img {
+                width: 48px !important;
+                height: 48px !important;
+            }
+
+            /* Social media section */
+            .instagram-link {
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            /* Footer adjustments */
+            .text-center span {
+                font-size: 1.5rem;
+            }
+
+            /* Music button position */
+            .fixed.bottom-4.left-4 {
+                bottom: 1rem;
+                left: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+
+            /* Improve spacing */
+            .space-y-6 > * + * {
+                margin-top: 1rem;
+            }
+
+            .space-y-8 > * + * {
+                margin-top: 1.5rem;
+            }
+
+            /* Grid adjustments for mobile */
+            .grid.grid-cols-1.lg\\:grid-cols-2 {
+                gap: 1.5rem;
+            }
+
+            /* Card titles smaller */
+            .vision-card h3 {
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+
+            /* Icon sizes */
+            .vision-card .w-12.h-12 {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            .vision-card i {
+                font-size: 1.25rem !important;
+            }
+
+            /* Full width cards on mobile */
+            .vision-card {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /* Better text alignment */
+            .text-center {
+                text-align: center;
+            }
+
+            /* Ensure images are responsive */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
@@ -269,13 +433,15 @@
             <!-- Profile Section - Foto dan Nama -->
             <div class="profile-section" style="width: 400px; flex-shrink: 0;">
                 <div class="text-center">
-                    <!-- Foto -->
-                    <div class="name-plate px-2 py-1 rounded-md inline-block mb-2 text-center mx-auto">
-                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 14px;">KANDIDAT DANCROPS NO 1</h2>
+                    <!-- Teks di atas -->
+                    <div class="name-plate px-4 py-2 rounded-lg inline-block mb-4 text-center mx-auto">
+                    <h2 class="font-bold text-yellow-400 marching-title" style="font-size: 18px;">KANDIDAT DANCROPS NO 01</h2>
                 </div>
-                    <div class="profile-image mx-auto mb-6 overflow-hidden image-loading" style="width: 300px; height: 300px;">
+
+                    <!-- Foto dipindahkan ke atas nama -->
+                    <div class="profile-image mx-auto mb-8 overflow-hidden image-loading" style="width: 350px; height: 350px;">
                         <img
-                            src="223344.jpg"
+                            src="223344444.png"
                             alt="Daffa Arridho dengan seragam marching band merah dan emas, memegang trumpet dengan pose profesional di lapangan"
                             class="w-full h-full object-contain"
                             loading="lazy"
@@ -283,20 +449,36 @@
                             onerror="this.src='223344.jpg'; this.setAttribute('loaded', 'true'); this.parentElement.classList.remove('image-loading')"
                         >
                     </div>
-                    
-                    <!-- Nama Daffa Arridho -->
-                    <div class="name-plate px-2 py-1 rounded-md inline-block">
-                        <h1 class="marching-title font-bold mb-1" style="font-size: 24px;">
+
+                    <!-- Nama Daffa Arridho dipindahkan ke bawah foto -->
+                    <div class="name-plate px-4 py-2 rounded-lg inline-block">
+                        <h1 class="marching-title font-bold mb-2" style="font-size: 32px;">
                 Daffa Arridho
             </h1>
 
-                        <p class="text-gray-200" style="font-size: 11px;">Tuba player • MB.Tunas Gurindam Corps </p>
+                        <p class="text-gray-200" style="font-size: 14px;">Tuba player • MB.Tunas Gurindam Corps </p>
+                    </div>
+
+                    <!-- NGL Link di bawah nama -->
+                    <div class="mt-6 text-center">
+                        <a href="https://ngl.link/daffaridhooo_2" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-full border-2 border-yellow-400 shadow-lg transform transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                            <i class="fas fa-link mr-2"></i>
+                            Kirim Pesan Anonim
+                        </a>
+                        <p class="text-gray-300 text-sm mt-3 italic">
+                            •KIRIMKAN SAYA PESAN• 
+                        </p>
+                        <p class="text-gray-300 text-sm mt-3 italic">
+                        "JIKA SAYA TERPILIH MENJADI DANCORPS , APA YANG BISA SAYA LAKUKAN UNTUK KEDEPANNYA"
+                        </p>
+                        <p class="text-gray-400 text-xs mt-1">
+                            !Pesan Anda akan tetap anonim dan aman!
+                        </p>
                     </div>
                 </div>
             </div>
 
 
-            
 
             <!-- Visi Misi Section -->
            <div class="space-y-12" style="width: 600px; flex-shrink: 0;">
@@ -307,9 +489,9 @@
                             <i class="fas fa-eye text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 24px;">VISI</h3>
-                            <p class="vision-content text-gray-200" style="font-size: 18px;">
-                                Menjadikan marching band tunas gurundam yg berprestasi disiplin creative dan mampu mengharumkan nama marching band tunas gurindam melalui seni musik dan penampilan yg berkualitas.
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">VISI</h3>
+                            <p class="vision-content text-gray-200" style="font-size: 20px;">
+                               Menjadikan Marching Band Tunas Guridam Corps yang berprestasi, disiplin, kreatif dan mampu mengharumkan nama marching band tunas gurindam melalui Penampilan dan kejuaran di tingkat Kota, Provinsi, bahkan Nasional.
                             </p>
                         </div>
                     </div>
@@ -322,19 +504,23 @@
                             <i class="fas fa-music text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 24px;">MISI</h3>
-                            <ul class="text-gray-200 space-y-4" style="font-size: 16px;">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">MISI</h3>
+                            <ul class="text-gray-200 space-y-4" style="font-size: 18px;">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>meningkatkan kedisplinan kekompakan dan tanggung jawab sesama anggota.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>mengenbangkan keterampilan musik dan teknik marching.</span>
+                                    <span>Mengembangkan keterampilan musik dan teknik Marching Band</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
-                                    <span>menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba.</span>
+                                    <span>Menumbuhkan rasa percaya diri serta jiwa sportivitas dalam setiap penampilan maupun lomba</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
+                                    <span> Membentuk karakter anggota sebagai sosok BRAVARA Sejati</span>
                                 </li>
                             </ul>
                         </div>
@@ -348,8 +534,8 @@
                             <i class="fas fa-clipboard-list text-white text-2xl md:text-3xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 24px;">PROGRAM</h3>
-                            <ul class="text-gray-200 space-y-4" style="font-size: 16px;">
+                            <h3 class="font-bold text-yellow-400 mb-4" style="font-size: 28px;">PROGRAM</h3>
+                            <ul class="text-gray-200 space-y-4" style="font-size: 18px;">
                                 <li class="flex items-start">
                                     <span class="w-4 h-4 bg-yellow-400 rounded-full mt-2 mr-4"></span>
                                     <span>Program senam pagi bersama setiap 1 bulan sekali</span>
@@ -409,14 +595,20 @@
                 <a href="https://www.instagram.com/tunasgurindam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300">
                     <i class="fab fa-instagram text-white text-2xl sm:text-3xl"></i>
                 </a>
+
+                <!-- NGL Link -->
+                <a href="https://ngl.link/daffaridhooo_2" target="_blank" class="instagram-link w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transform transition-all duration-300" style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #FFE66D);">
+                    <i class="fas fa-link text-white text-2xl sm:text-3xl"></i>
+                </a>
             </div>
 
-            <!-- Nama Akun Instagram -->
+            <!-- Nama Akun Sosial Media -->
             <div class="text-center">
-                <p class="text-gray-300 text-lg mb-4">Follow akun Instagram:</p>
+                <p class="text-gray-300 text-lg mb-4">Follow akun sosial media:</p>
                 <div class="flex justify-center space-x-4 sm:space-x-6 md:space-x-8 flex-wrap gap-3 sm:gap-4">
                     <span class="text-white font-bold bg-red-600 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@daffaridhooo_</span>
                     <span class="text-white font-bold bg-blue-800 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">@tunasgurindam</span>
+                    <span class="text-white font-bold bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-yellow-400 text-sm sm:text-base md:text-lg">NGL: @DAFFARIDHOOO_2</span>
                 </div>
                 <p class="text-gray-200 text-sm mt-6 italic">
                     Saksikan momen spesial, latihan, dan pertunjukan spektakuler kami!
@@ -447,10 +639,11 @@
 
     <!-- Background Music - Plays on User Interaction -->
     <audio id="bgMusic" loop preload="auto" style="display: none;">
-        <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
-        <source src="background-music.ogg" type="audio/ogg">
+        <source src="SOLO PITOK2.mp3" type="audio/mpeg">
+        <source src="SOLO PITOK2.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
 
     <script>
         // Background Music - Plays on User Interaction
@@ -460,7 +653,7 @@
 
             // Set volume
             if (bgMusic) {
-                bgMusic.volume = 0.3; // 30% volume
+                bgMusic.volume = 0.8; // 90% volume
             }
 
             // Function to start music
