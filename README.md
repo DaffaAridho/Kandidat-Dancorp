@@ -638,7 +638,7 @@
     </div>
 
     <!-- Background Music - Plays on User Interaction -->
-    <audio id="bgMusic" loop preload="auto" style="display: none;">
+    <audio id="bgMusic" loop preload="auto" style="display: none;" autoplay>
         <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
         <source src="Awards Ceremony Red Carpet Background Music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
